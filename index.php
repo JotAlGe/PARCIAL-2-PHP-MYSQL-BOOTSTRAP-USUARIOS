@@ -55,7 +55,7 @@ require_once 'functions/select_incidents.php';
           <div class="info">
             <!-- cantidad de incidencias finalizadas -->
             <h4>Incidencias Finalizadas</h4>
-            <p><b><?php echo count_completed_incidents($conn); ?></b></p>
+            <p><b><?php echo count_incidents($conn, 3); ?></b></p>
           </div>
         </div>
       </div>
@@ -64,7 +64,7 @@ require_once 'functions/select_incidents.php';
           <div class="info">
             <!-- cantidad de incidencias en proceso -->
             <h4>Incidencias en proceso</h4>
-            <p><b><?php echo count_incidents_in_process($conn); ?></b></p>
+            <p><b><?php echo count_incidents($conn, 2); ?></b></p>
           </div>
         </div>
       </div>
@@ -73,7 +73,7 @@ require_once 'functions/select_incidents.php';
           <div class="info">
             <!-- cantidad de incidencias empezadas -->
             <h4>Incidencias Iniciadas</h4>
-            <p><b><?php echo count_incidents_started($conn); ?></b></p>
+            <p><b><?php echo count_incidents($conn, 1); ?></b></p>
           </div>
         </div>
       </div>

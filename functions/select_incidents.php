@@ -87,28 +87,9 @@ function list_incidents($vConn, $lev)
     return $list;
 }
 
-// cuanta las incidencias finalizadas
-function count_completed_incidents($vConn)
+function count_incidents($vConn, $sta)
 {
-    $sql = "SELECT id_inc FROM incidents WHERE id_sta = 3";
-    $result = mysqli_query($vConn, $sql);
-    $cant = mysqli_num_rows($result);
-    return $cant;
-}
-
-// función que retorna el número de filas de 
-function count_incidents_in_process($vConn)
-{
-    $sql = "SELECT id_inc FROM incidents WHERE id_sta = 2";
-    $result = mysqli_query($vConn, $sql);
-    $cant = mysqli_num_rows($result);
-    return $cant;
-}
-
-// cuenta las incidencias iniciadas
-function count_incidents_started($vConn)
-{
-    $sql = "SELECT id_inc FROM incidents WHERE id_sta = 1";
+    $sql = "SELECT id_inc FROM incidents WHERE id_sta = {$sta}";
     $result = mysqli_query($vConn, $sql);
     $cant = mysqli_num_rows($result);
     return $cant;
