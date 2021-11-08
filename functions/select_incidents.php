@@ -86,11 +86,3 @@ function list_incidents($vConn, $lev)
     //devuelvo el listado generado en el array $list. (Podra salir vacio o con datos)..
     return $list;
 }
-
-function count_incidents($vConn, $sta)
-{
-    $sql = "SELECT id_inc FROM incidents WHERE id_sta = {$sta}";
-    $result = mysqli_query($vConn, $sql);
-    $cant = mysqli_num_rows($result);
-    return $cant;
-}

@@ -52,11 +52,3 @@ function user_data($vUser, $vPass, $vConnection)
     }
     return $users;
 }
-
-function count_users($vConnection)
-{
-    $sql = "SELECT id_us FROM users";
-    $result = mysqli_query($vConnection, $sql);
-    $cant = mysqli_num_rows($result);
-    return $cant;
-}
