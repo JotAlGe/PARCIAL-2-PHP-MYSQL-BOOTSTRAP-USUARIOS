@@ -9,8 +9,8 @@ if (empty($_SESSION['name'])) {
 // archivos requeridos para traer las funciones que cuentan incidencias y usuarios en el panel index.php
 require_once 'functions/connection.php';
 $conn = connection_db();
-require_once 'functions/login.php';
-require_once 'functions/select_incidents.php';
+
+require_once 'functions/counters.php';
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 ?>
 <?php require_once 'includes/head.inc.php'; ?>
