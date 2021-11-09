@@ -96,7 +96,7 @@ if (isset($_POST['register'])) {
 
               <div class="form-group">
                 <label class="control-label">Descripción del problema <i class="fa fa-asterisk" aria-hidden="true"></i></label>
-                <textarea class="form-control" rows="4" placeholder="Ingresa los detalles..." name="description">
+                <textarea class="form-control" rows="4" placeholder="Ingresa los detalles..." name="description" value="">
                   </textarea>
               </div>
               <div class="form-group">
